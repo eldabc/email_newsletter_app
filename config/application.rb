@@ -16,7 +16,13 @@ module AppRailsSiete
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
-    # config.time_zone = "Central Time (US & Canada)"
+    
+    I18n.available_locales = %i[es en fr]
+    config.time_zone = "Caracas"
+    config.i18n.default_locale = 'es'
+
+    config.autoload_paths += %W(#{config.root}/lib)
+
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end

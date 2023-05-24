@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= t(:title_e_n) %></h1>
+<%= link_to t(:add_newsletter), new_email_newsletter_path, class: "btn btn-success btn-lg" %>
+
+<hr>
+<div id="email_newsletters">
+  <% @email_newsletters.each do |email_newsletter| %>
+    <%= render email_newsletter %>
+    <p>
+      <%= link_to t(:show_newsletter), email_newsletter, class: "btn btn-info btn-lg"%>
+    </p>
+  <% end %>
+</div>
+<hr>

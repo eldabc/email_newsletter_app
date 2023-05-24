@@ -1,0 +1,12 @@
+<div id="<%= dom_id email_newsletter %>">
+  <p>
+    <strong><%= t(:email) %>:</strong>
+    <%= email_newsletter.email %>
+  </p>
+
+  <p>
+    <strong> <%= t(:preferences) %>:</strong>
+    <%= email_newsletter.preferences.split(',').map { |key| key.capitalize.sub('_', " ") }.to_sentence %>
+  </p>
+
+</div>

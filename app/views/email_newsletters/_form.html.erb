@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-5 offset-md-3">
+    <%= form_with(model: email_newsletter) do |form| %>
+      <% if email_newsletter.errors.any? %>
+        <div style="color: red">
+          <h2><%= pluralize(email_newsletter.errors.count, "error") %> <%= t(:title_errors_message) %></h2>
+
+          <ul>
+            <% email_newsletter.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="mb-3">
+        <%= form.label t(:email), class: "form-label text-bold", style: "font-weight: bold;" %>
+        <%= form.text_field :email, class: "form-control" %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label t(:preferences), class: "form-label", style: "font-weight: bold;" %>
+        <% PREFERENCES.each do |key| %>
+          <br>
+          <%= form.check_box :preferences, { multiple: true, checked: form.object.preferences&.include?(key.to_s) }, key, nil %>
+          <%= form.label key%>
+        <% end %>
+      </div>
+
+      <div>
+        <%= form.submit t(:subscribe_me), class: "btn btn-success btn-lg" %>
+        <%= link_to t(:cancel),  email_newsletters_path, class: "btn btn-danger btn-lg"%>
+      </div>
+    <% end %>
+  </div>
+</div>

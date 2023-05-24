@@ -1,0 +1,7 @@
+<h1 class="center"> <%= t(:welcome_message) %> </h1>
+<h2 class="center"> <%= t(:suscribe_to_newsletter) %> </h2>
+
+<div class="box-suscribe">
+  <%= render "form", email_newsletter: @email_newsletter %>
+  <br>
+</div>

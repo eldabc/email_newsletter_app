@@ -30,4 +30,18 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  #-----------------------------------------------------
+  #-Email NewsLetter Section-
+  welcome_message: "Welcome! Soon we will launch our site in this country."
+  suscribe_to_newsletter: "Suscribe to receive our newsletter."
+  title_errors_message: "prohibited this email_newsletter from being saved:"
+  email: "Email"
+  preferences: "Preferences"
+  subscribe_me: "Subscribe Me!"
+  cancel: "Cancel"
+  title_e_n: "Email NewsLetter"
+
+  add_newsletter: "Add"
+  show_newsletter: "Show"
+
+

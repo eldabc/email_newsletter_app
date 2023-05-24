@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @email_newsletter %>
+
+<div class="box-index">
+  <%= link_to "Back", email_newsletters_path, class: "btn btn-info btns-index" %>
+
+  <%= button_to "Destroy this email newsletter", @email_newsletter, method: :delete, class: "btn btn-danger" %>
+</div>
