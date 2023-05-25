@@ -46,6 +46,6 @@ class EmailNewslettersController < ApplicationController
     end
 
     def email_newsletter_params
-      params.require(:email_newsletter).permit(:email, preferences: [] ) #"women_fashion", "men_fas hion", "children_fashion"
+      params.require(:email_newsletter).permit(:email, preferences: '[]' )
     end
 end
