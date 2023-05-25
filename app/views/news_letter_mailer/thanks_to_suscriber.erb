@@ -4,11 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to test_micolet.com</h1>
+    <h1><%= t(:title_email) %></h1>
     <p>
-      GRACIAS POR SUSCRIBIRTE: <%= @email_newsletter.email %>.<br>
+      <%= t(:thanks_email) %>
+      <%=  @email_newsletter.email %>
+      <br>
     </p>
     
-    <p>Thanks for joining and have a great day!</p>
+    <p> <%= t(:message_email) %> </p>
   </body>
 </html>

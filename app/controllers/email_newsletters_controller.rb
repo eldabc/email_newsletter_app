@@ -17,10 +17,9 @@ class EmailNewslettersController < ApplicationController
 
     respond_to do |format|      
       #if EmailVerify.new(@email_newsletter.email).verified
-      debugger
         if @email_newsletter.save
-          NewsLetterMailer.with(email_newsletter: @email_newsletter).welcome_email.deliver_now
-          format.html { redirect_to email_newsletter_url(@email_newsletter), notice: "Email newsletter was successfully created." }
+          NewsLetterMailer.thanks_to_suscriber(@email_newsletter).deliver
+          format.html { redirect_to email_newsletter_url(@email_newsletter), notice: t(:newsletter_created) }
         else
           format.html { render :new, status: :unprocessable_entity }
         end

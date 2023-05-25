@@ -228,6 +228,12 @@ fr:
   subscribe_me: ""
   cancel: ""
   title_e_n: ""
+  newsletter_created: ""
 
-  add_newsletter: ""
-  show_newsletter: ""
+  # General options
+  add: ""
+  show: ""
+  thanks_suscribe_newsletter: ""
+  title_email: ""
+  thanks_email: ""
+  message_email: ""

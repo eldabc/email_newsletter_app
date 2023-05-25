@@ -15,9 +15,18 @@
 }
 
 .box-index {
-  display: inline-flex; width: 50%;
+  display: inline-flex; 
+  width: 50%;
 }
 
 .btns-index {
   margin: 0 4%;
+}
+
+.notice {
+  color: green;
+}
+
+.custom-container {
+  padding: 5%;
 }

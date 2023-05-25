@@ -217,6 +217,7 @@ es:
       long: "%A, %d de %B de %Y a las %I:%M%p"
       short: "%d de %b a las %H:%M%p"
     pm: pm
+
   #-----------------------------------------------------
   #-Email NewsLetter Section-
   welcome_message: "¡Bienvenido! Próximamente lanzaremos nuestro sitio en este país."
@@ -227,7 +228,16 @@ es:
   subscribe_me: "Suscribirme!"
   cancel: "Cancelar"
   title_e_n: "Email Boletin"
+  newsletter_created: "Boletin creado exitosamente."
 
-  add_newsletter: "Agregar"
-  show_newsletter: "Mostrar"
+  # General opstions
+  add: "Agregar"
+  show: "Mostrar"
+
+  #--------------------------------------------------------
+  # Email Section
+  thanks_suscribe_newsletter: "Gracias por suscribirte a nuestro Boletin"
+  title_email: "Bienvenido test_micolet.com"
+  thanks_email: "GRACIAS POR SUSCRIBIRTE:"
+  message_email: "Que tengas un gran día!"
 

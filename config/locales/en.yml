@@ -40,8 +40,14 @@ en:
   subscribe_me: "Subscribe Me!"
   cancel: "Cancel"
   title_e_n: "Email NewsLetter"
+  newsletter_created: "Email newsletter was successfully created."
 
-  add_newsletter: "Add"
-  show_newsletter: "Show"
+  # General options
+  add: "Add"
+  show: "Show"
 
+  thanks_suscribe_newsletter: "Thank you for signing up to our newsletter"
+  title_email: "Welcome to test_micolet.com"
+  thanks_email: "THANKS FOR SUSCRIBE:"
+  message_email: "Thanks for joining and have a great day!"
 
