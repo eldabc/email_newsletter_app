@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Esta guia incluye los pasos para realizar la configuracion e instalacion de su app en Rails]]
 
-Things you may want to cover:
+Cosas necesarios:
 
-* Ruby version
+* Ruby version: 3.0.0
 
-* System dependencies
+* Configuration: Una vez clonado el repositorio ejecutar bundle install
 
-* Configuration
+* Database creation: 
+    La app funciona con sqlite3 por defecto.
 
-* Database creation
+* Database initialization:
+    Emplear el comando rails:db migrate para crear la base de datos
 
-* Database initialization
+* How to run the test suite:
+    La app usa la gema rspec para la ejecucion de testing ejecutar rspec spec para ejecutar todos los test  
 
-* How to run the test suite
+* External Apps used:
+    Api de sendgrind (api key value located in rails credentials)
+    Api Abstract
 
-* Services (job queues, cache servers, search engines, etc.)
+* Commands: 
 
-* Deployment instructions
+  rails credentials:help
+  rails credentials:edit
+  rails credentials:edit --environment production
 
-* ...
+  EDITOR=nano rails credentials:edit --environment development
+
+* Para ver configuracion de credenciales locales run:
+    rails c 
+    Escriba: Rails.application.credentials.config
+
+  

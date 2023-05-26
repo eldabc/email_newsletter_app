@@ -14,20 +14,20 @@ class EmailNewslettersController < ApplicationController
 
   def create
     @email_newsletter = EmailNewsletter.new(email_newsletter_params)
+  
+    resul_verify = EmailVerify.new(@email_newsletter.email).verify
 
-    respond_to do |format|      
-      #if EmailVerify.new(@email_newsletter.email).verified
-        if @email_newsletter.save
-          NewsLetterMailer.thanks_to_suscriber(@email_newsletter).deliver
-          format.html { redirect_to email_newsletter_url(@email_newsletter), notice: t(:newsletter_created) }
-        else
-          format.html { render :new, status: :unprocessable_entity }
-        end
-      #else
-      #  @email_newsletter.errors.add(:base, "Email no reune las condiciones para añadirse al boletin")
-      #  format.html { render :new, status: :unprocessable_entity }
-      #end
-    end
+      if resul_verify.class == String
+        @email_newsletter.errors.add(:base, resul_verify)
+        return render :new, status: :unprocessable_entity
+      end
+
+      if @email_newsletter.save
+        NewsLetterMailer.thanks_to_suscriber(@email_newsletter).deliver
+        redirect_to email_newsletter_url(@email_newsletter), notice: t(:newsletter_created)
+      else
+        render :new, status: :unprocessable_entity
+      end
   end
 
 
