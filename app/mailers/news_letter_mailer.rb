@@ -1,5 +1,5 @@
 class NewsLetterMailer < ApplicationMailer
-  default from: 'eldabc01@gmail.com'
+  default from: 'paolabello3220@gmail.com'
 
   def thanks_to_suscriber(email_newsletter)
     @email_newsletter = email_newsletter
