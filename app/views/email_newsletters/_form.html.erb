@@ -3,7 +3,7 @@
     <%= form_with(model: email_newsletter) do |form| %>
       <% if email_newsletter.errors.any? %>
         <div style="color: red">
-          <h2><%= pluralize(email_newsletter.errors.count, "error") %> <%= t(:title_errors_message) %></h2>
+          <h2><%= pluralize(email_newsletter.errors.count, "Error") %></h2>
 
           <ul>
             <% email_newsletter.errors.each do |error| %>
@@ -15,7 +15,7 @@
 
       <div class="mb-3">
         <%= form.label t(:email), class: "form-label text-bold", style: "font-weight: bold;" %>
-        <%= form.text_field :email, class: "form-control" %>
+        <%= form.text_field :email, class: "form-control", required: true %>
       </div>
 
       <div class="mb-3">

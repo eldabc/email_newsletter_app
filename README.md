@@ -1,36 +1,46 @@
 # README
 
-Esta guia incluye los pasos para realizar la configuracion e instalacion de su app en Rails]]
+This guide includes the steps to configure and install your app in Rails.
 
-Cosas necesarios:
+Necessary things:
 
 * Ruby version: 3.0.0
 
-* Configuration: Una vez clonado el repositorio ejecutar bundle install
+* Configuration: Once the repository has been cloned, run
+    bundle install
 
 * Database creation: 
-    La app funciona con sqlite3 por defecto.
+    The app works with sqlite3 by default.
 
 * Database initialization:
-    Emplear el comando rails:db migrate para crear la base de datos
+    Use the command
+      rails:db create para crear la base de datos
+      rails:db migrate para crear el esquema
 
 * How to run the test suite:
-    La app usa la gema rspec para la ejecucion de testing ejecutar rspec spec para ejecutar todos los test  
+    The app uses the rspec gem for testing execution:
+     rspec spec to run all tests
 
 * External Apps used:
-    Api de sendgrind (api key value located in rails credentials)
-    Api Abstract
+    Sendgrind Api (api key value in rails credentials)
+    Abstract Api (api_key in rails credentials)
 
-* Commands: 
+* Commands to rails credentials: 
 
-  rails credentials:help
-  rails credentials:edit
+  rails credentials:help (for help)
+  rails credentials:edit (for edit)
   rails credentials:edit --environment production
 
-  EDITOR=nano rails credentials:edit --environment development
+  EDITOR=nano rails credentials:edit --environment development (open to editor)
 
-* Para ver configuracion de credenciales locales run:
+* To view local credentials configuration run:
     rails c 
-    Escriba: Rails.application.credentials.config
+    Entry: Rails.application.credentials.config
+
+* Once the above instructions have been verified, run rails s 
+
+* Go to http://127.0.0.1:3000/
+
+ Enjoy! ;)
 
   

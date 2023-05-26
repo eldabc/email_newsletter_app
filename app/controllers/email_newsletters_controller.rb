@@ -33,10 +33,7 @@ class EmailNewslettersController < ApplicationController
 
   def destroy
     @email_newsletter.destroy
-
-    respond_to do |format|
-      format.html { redirect_to email_newsletters_url, notice: "Email newsletter was successfully destroyed." }
-    end
+    redirect_to email_newsletters_url, notice: "Email newsletter was successfully destroyed."
   end
 
   private

@@ -7,6 +7,8 @@ class EmailVerify
     end
 
     def make_abstract_request
+      return raise "Email is required" unless @email.present?
+
       uri = URI("https://emailvalidation.abstractapi.com/v1/?api_key=#{Rails.application.credentials.dig(:abstract, :api_key)}&email=#{@email}")
 
       http = Net::HTTP.new(uri.host, uri.port)
