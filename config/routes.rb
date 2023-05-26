@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
 
   scope '(:locale)', locale: /#{I18n.available_locales.join("|")}/ do
-    resources :email_newsletters
     root 'email_newsletters#index'
+    resources :email_newsletters
   end
 end

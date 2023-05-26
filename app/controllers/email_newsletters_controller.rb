@@ -46,6 +46,6 @@ class EmailNewslettersController < ApplicationController
     end
 
     def email_newsletter_params
-      params.require(:email_newsletter).permit(:email, preferences: '[]' )
+      params.require(:email_newsletter).permit(:email, preferences: [] )
     end
 end

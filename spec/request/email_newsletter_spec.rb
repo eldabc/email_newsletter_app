@@ -24,7 +24,7 @@ RSpec.describe "EmailNewsLetter", type: :request do
     end
   end
 
-  describe "GET /email_newsletters/:id" do
+  describe "When GET /email_newsletters/:id" do
     it "should show email newsletter" do   
       get "/email_newsletters/#{email_newsletter.id}"
       expect(response).to have_http_status(:ok)
