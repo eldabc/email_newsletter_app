@@ -30,3 +30,10 @@
 .custom-container {
   padding: 5%;
 }
+
+.confirm-box {
+  
+  background-image: url('https://media.istockphoto.com/id/1181871089/es/vector/guirnalda-con-banderas-1.jpg?s=1024x1024&w=is&k=20&c=8BICJCZKG2u1-Pl39B7UIXdQXjXIUuA1qh9oNrJLmOk=');
+  width: 100%;
+  height: 800px;
+}

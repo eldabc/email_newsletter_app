@@ -229,6 +229,10 @@ fr:
   cancel: ""
   title_e_n: ""
   newsletter_created: ""
+  email_confirm: ""
+  email_confirmed: ""
+  email_no_confirmed: ""
+  email_was_confirmed: ""
 
   # General options
   add: ""

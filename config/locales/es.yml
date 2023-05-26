@@ -229,6 +229,10 @@ es:
   cancel: "Cancelar"
   title_e_n: "Email Boletin"
   newsletter_created: "Boletin creado exitosamente."
+  email_confirm: "CONFIRMAR EMAIL"
+  email_confirmed: "HEMOS CONFIRMADO TU EMAIL!"
+  email_no_confirmed: "No hemos podido confirmar tu email"
+  email_was_confirmed: "Email ya ha sido confirmado"
 
   # General opstions
   add: "Agregar"

@@ -41,6 +41,10 @@ en:
   cancel: "Cancel"
   title_e_n: "Email NewsLetter"
   newsletter_created: "Email newsletter was successfully created."
+  email_confirm: "CONFIRM EMAIL"
+  email_confirmed: "EMAIL CONFIRMED!"
+  email_no_confirmed: "We have not been able to confirm your email"
+  email_was_confirmed: "Email was confirmed"
 
   # General options
   add: "Add"

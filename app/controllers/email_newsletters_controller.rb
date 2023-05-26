@@ -36,6 +36,20 @@ class EmailNewslettersController < ApplicationController
     redirect_to email_newsletters_url, notice: "Email newsletter was successfully destroyed."
   end
 
+  def confirm
+    if params[:newsletter_id].present?
+      @email_newsletter = EmailNewsletter.find(params[:newsletter_id])
+      return redirect_to email_newsletters_url, notice: t(:email_was_confirmed) if @email_newsletter.confirm
+
+      @email_newsletter.confirm = true
+      @email_newsletter.save!
+
+      flash.now[:notice] = t(:email_confirmed)
+    else
+      redirect_to email_newsletters_url, notice: t(:email_no_confirmed)
+    end
+  end
+
   private
 
     def set_email_newsletter

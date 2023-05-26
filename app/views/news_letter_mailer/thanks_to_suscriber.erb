@@ -10,7 +10,8 @@
       <%=  @email_newsletter.email %>
       <br>
     </p>
-    
-    <p> <%= t(:message_email) %> </p>
+    <%= link_to t(:email_confirm), "http://127.0.0.1:3000/email_newsletters/confirm/#{@email_newsletter.id}", class: "btn btn-danger btn-lg"%>
+    <p> <%= t(:message_email) %>  </p>
+
   </body>
 </html>
